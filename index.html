@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhairya Shah | Portfolio</title>
+    <meta name="description"
+        content="Dhairya Shah – ICT Student, Developer, and Competitive Programmer from Ahmedabad." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ░░ LOADER ░░ -->
+    <div id="loader">
+        <div class="loader-inner">
+            <span class="loader-text">LOADING<span class="dots">...</span></span>
+            <div class="loader-bar">
+                <div class="loader-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ░░ CURSOR ░░ -->
+    <div id="cursor-dot"></div>
+
+    <!-- ░░ NOISE OVERLAY ░░ -->
+    <canvas id="noise-canvas"></canvas>
+
+    <!-- ░░ NAV ░░ -->
+    <nav id="navbar">
+        <div class="nav-logo">
+            <span class="logo-bracket">&lt;</span>DS<span class="logo-bracket">/&gt;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ░░ MOBILE MENU ░░ -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#skills" class="mobile-link">Skills</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#achievements" class="mobile-link">Achievements</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ░░ HERO ░░ -->
+    <section id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for Opportunities
+            </div>
+            <h1 class="hero-name">
+                <span class="name-line" data-text="DHAIRYA">DHAIRYA</span>
+                <span class="name-line accent" data-text="SHAH">SHAH</span>
+            </h1>
+            <div class="hero-tagline">
+                <span id="typed-text"></span><span class="cursor-blink">|</span>
+            </div>
+            <p class="hero-sub">
+                B.Tech ICT @ PDEU · Building things that matter · Ahmedabad, India
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="mailto:shahdhairya763@gmail.com" class="btn btn-outline">
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-num">7.65</span>
+                    <span class="stat-label">CGPA (B.Tech)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">8.68</span>
+                    <span class="stat-label">CGPA (Diploma)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">2+</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">4+</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-terminal">
+            <div class="terminal-header">
+                <span class="t-dot red"></span>
+                <span class="t-dot yellow"></span>
+                <span class="t-dot green"></span>
+                <span class="t-title">dhairya@portfolio:~$</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="t-line"><span class="t-prompt">❯</span> <span class="t-cmd">whoami</span></div>
+                <div class="t-line t-output">dhairya-shah</div>
+                <div class="t-line"><span class="t-prompt">❯</span> <span class="t-cmd">cat ./profile.json</span></div>
+                <div class="t-line t-output">{</div>
+                <div class="t-line t-output">&nbsp;&nbsp;"role": "ICT Student & Developer",</div>
+                <div class="t-line t-output">&nbsp;&nbsp;"location": "Ahmedabad, India",</div>
+                <div class="t-line t-output">&nbsp;&nbsp;"focus": ["DSA", "Security", "Systems"],</div>
+                <div class="t-line t-output">&nbsp;&nbsp;"status": "open_to_work"</div>
+                <div class="t-line t-output">}</div>
+                <div class="t-line"><span class="t-prompt">❯</span> <span class="t-cursor-term">█</span></div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ░░ ABOUT ░░ -->
+    <section id="about">
+        <div class="container">
+            <div class="section-label">// 01 — about me</div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">Who Am I?</h2>
+                    <p>
+                        I'm <strong>Dhairya Shah</strong>, a passionate ICT student at Pandit Deendayal Energy
+                        University with a strong
+                        foundation in software development, cybersecurity, and competitive programming.
+                    </p>
+                    <p>
+                        My journey began with a Diploma in Computer Engineering, where I discovered my love for
+                        building secure, efficient systems. I enjoy solving complex problems — whether it's
+                        implementing encryption mechanisms or designing custom shell terminals.
+                    </p>
+                    <p>
+                        Outside of academics, I actively solve problems on <strong>LeetCode</strong> and
+                        <strong>Codeforces</strong>,
+                        and I'm enrolled in a Competitive Programming & Placement Training Program at PDEU.
+                    </p>
+                    <div class="about-chips">
+                        <span class="chip">Problem Solver</span>
+                        <span class="chip">Security Enthusiast</span>
+                        <span class="chip">Open to Internships</span>
+                        <span class="chip">CP Practitioner</span>
+                    </div>
+                </div>
+                <div class="about-edu">
+                    <h3 class="edu-heading">Education</h3>
+                    <div class="edu-timeline">
+                        <div class="edu-item">
+                            <div class="edu-icon">🎓</div>
+                            <div class="edu-details">
+                                <div class="edu-degree">B.Tech – ICT</div>
+                                <div class="edu-inst">Pandit Deendayal Energy University</div>
+                                <div class="edu-meta">
+                                    <span class="edu-year">2024 – 2027</span>
+                                    <span class="edu-cgpa">CGPA: 7.65</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edu-connector"></div>
+                        <div class="edu-item">
+                            <div class="edu-icon">🏫</div>
+                            <div class="edu-details">
+                                <div class="edu-degree">Diploma – Computer Engineering</div>
+                                <div class="edu-inst">RC Technical Institute</div>
+                                <div class="edu-meta">
+                                    <span class="edu-year">2021 – 2024</span>
+                                    <span class="edu-cgpa">CGPA: 8.68</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ░░ SKILLS ░░ -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-label">// 02 — technical skills</div>
+            <h2 class="section-title">My Arsenal</h2>
+            <div class="skills-wrapper">
+
+                <div class="skill-category">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </div>
+                        <span>Languages</span>
+                    </div>
+                    <div class="skill-tags">
+                        <div class="skill-tag" data-level="80">
+                            <span class="skill-logo java">J</span> Java
+                        </div>
+                        <div class="skill-tag" data-level="75">
+                            <span class="skill-logo python">P</span> Python
+                        </div>
+                        <div class="skill-tag" data-level="65">
+                            <span class="skill-logo cpp">C</span> C++
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path
+                                    d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
+                            </svg>
+                        </div>
+                        <span>Core CS</span>
+                    </div>
+                    <div class="skill-tags">
+                        <div class="skill-tag"><span class="skill-icon">⚡</span>DSA</div>
+                        <div class="skill-tag"><span class="skill-icon">🔷</span>OOP</div>
+                        <div class="skill-tag"><span class="skill-icon">🗄️</span>DBMS</div>
+                        <div class="skill-tag"><span class="skill-icon">⚙️</span>OS</div>
+                        <div class="skill-tag"><span class="skill-icon">🌐</span>Networks</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                            </svg>
+                        </div>
+                        <span>Web</span>
+                    </div>
+                    <div class="skill-tags">
+                        <div class="skill-tag"><span class="skill-icon">🟧</span>HTML</div>
+                        <div class="skill-tag"><span class="skill-icon">🟦</span>CSS</div>
+                        <div class="skill-tag"><span class="skill-icon">🟨</span>JavaScript</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg>
+                        </div>
+                        <span>Tools</span>
+                    </div>
+                    <div class="skill-tags">
+                        <div class="skill-tag"><span class="skill-icon">🐱</span>GitHub</div>
+                        <div class="skill-tag"><span class="skill-icon">🖥️</span>VSCode</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Proficiency Bars -->
+            <div class="proficiency-section">
+                <h3 class="prof-heading">Language Proficiency</h3>
+                <div class="prof-bars">
+                    <div class="prof-bar-item">
+                        <div class="prof-bar-label"><span>Java</span><span>80%</span></div>
+                        <div class="prof-bar-track">
+                            <div class="prof-bar-fill" data-width="80%" style="--w:80%"></div>
+                        </div>
+                    </div>
+                    <div class="prof-bar-item">
+                        <div class="prof-bar-label"><span>Python</span><span>75%</span></div>
+                        <div class="prof-bar-track">
+                            <div class="prof-bar-fill" data-width="75%" style="--w:75%"></div>
+                        </div>
+                    </div>
+                    <div class="prof-bar-item">
+                        <div class="prof-bar-label"><span>C++</span><span>65%</span></div>
+                        <div class="prof-bar-track">
+                            <div class="prof-bar-fill" data-width="65%" style="--w:65%"></div>
+                        </div>
+                    </div>
+                    <div class="prof-bar-item">
+                        <div class="prof-bar-label"><span>HTML/CSS/JS</span><span>70%</span></div>
+                        <div class="prof-bar-track">
+                            <div class="prof-bar-fill" data-width="70%" style="--w:70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ░░ PROJECTS ░░ -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-label">// 03 — projects</div>
+            <h2 class="section-title">What I Built</h2>
+            <div class="projects-grid">
+
+                <div class="project-card" id="project-vault">
+                    <div class="project-card-inner">
+                        <div class="project-top">
+                            <div class="project-icon">🔐</div>
+                            <div class="project-links">
+                                <a href="#" class="proj-link" aria-label="GitHub">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Secret Vault System</h3>
+                        <p class="project-desc">A secure vault system to store and manage sensitive information using
+                            encrypted storage mechanisms and configurable encryption keys.</p>
+                        <ul class="project-points">
+                            <li>Implemented secret handling with configurable encryption keys via structured JSON</li>
+                            <li>Python-based backend for secure add, retrieve & manage operations</li>
+                            <li>Lightweight, dependency-minimal architecture for security applications</li>
+                        </ul>
+                        <div class="project-stack">
+                            <span class="stack-tag">Python</span>
+                            <span class="stack-tag">JSON</span>
+                            <span class="stack-tag">Encryption Libs</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-category security">🔒 Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" id="project-shell">
+                    <div class="project-card-inner">
+                        <div class="project-top">
+                            <div class="project-icon">🖥️</div>
+                            <div class="project-links">
+                                <a href="#" class="proj-link" aria-label="GitHub">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Mini Shell Terminal</h3>
+                        <p class="project-desc">A custom mini shell terminal that interprets and executes user commands
+                            in a UNIX-like environment with full process management.</p>
+                        <ul class="project-points">
+                            <li>Leveraged Linux System Calls (fork, exec, wait, pipe) for process creation</li>
+                            <li>Supports background tasks, I/O redirection, and piping</li>
+                            <li>Mimics real shell behavior in a controlled Python environment</li>
+                        </ul>
+                        <div class="project-stack">
+                            <span class="stack-tag">Python</span>
+                            <span class="stack-tag">Linux Syscalls</span>
+                            <span class="stack-tag">Shell Scripting</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-category systems">⚙️ Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ░░ ACHIEVEMENTS ░░ -->
+    <section id="achievements">
+        <div class="container">
+            <div class="section-label">// 04 — achievements</div>
+            <h2 class="section-title">Milestones</h2>
+            <div class="achievements-grid">
+
+                <div class="ach-card">
+                    <div class="ach-icon">🏆</div>
+                    <div class="ach-content">
+                        <div class="ach-issuer">Wadhwani Foundation</div>
+                        <div class="ach-title">21st Century Employability Skills Program</div>
+                        <div class="ach-badge">Certified</div>
+                    </div>
+                </div>
+
+                <div class="ach-card">
+                    <div class="ach-icon">🌐</div>
+                    <div class="ach-content">
+                        <div class="ach-issuer">EC-Council</div>
+                        <div class="ach-title">Introduction to Dark Web, Anonymity & Cryptocurrency</div>
+                        <div class="ach-badge">Certified</div>
+                    </div>
+                </div>
+
+                <div class="ach-card">
+                    <div class="ach-icon">🧠</div>
+                    <div class="ach-content">
+                        <div class="ach-issuer">Workshop</div>
+                        <div class="ach-title">Deep Learning: Essentials for Development</div>
+                        <div class="ach-badge">Certified</div>
+                    </div>
+                </div>
+
+                <div class="ach-card">
+                    <div class="ach-icon">🔒</div>
+                    <div class="ach-content">
+                        <div class="ach-issuer">NPTEL</div>
+                        <div class="ach-title">Privacy and Security in Online Social Media</div>
+                        <div class="ach-badge">Certified</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CP Section -->
+            <div class="cp-section">
+                <h3 class="cp-heading">Competitive Programming</h3>
+                <div class="cp-grid">
+                    <div class="cp-card">
+                        <div class="cp-platform">
+                            <span class="cp-logo lc">LC</span>
+                            <span>LeetCode</span>
+                        </div>
+                        <p>Actively solving DSA problems to sharpen algorithmic thinking and interview readiness.</p>
+                    </div>
+                    <div class="cp-card">
+                        <div class="cp-platform">
+                            <span class="cp-logo cf">CF</span>
+                            <span>Codeforces</span>
+                        </div>
+                        <p>Regular participant in competitive programming contests to build competitive instinct.</p>
+                    </div>
+                    <div class="cp-card">
+                        <div class="cp-platform">
+                            <span class="cp-logo pdeu">PD</span>
+                            <span>PDEU Training</span>
+                        </div>
+                        <p>Enrolled in official Competitive Programming & Placement Training Program at PDEU.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ░░ CONTACT ░░ -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-label">// 05 — contact</div>
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-sub">I'm open to internships, collaborations, and interesting projects. Reach out!</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item" id="contact-email">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-label">Email</div>
+                            <a href="mailto:shahdhairya763@gmail.com" class="contact-val">shahdhairya763@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" id="contact-phone">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-label">Phone</div>
+                            <a href="tel:+918160854191" class="contact-val">+91 8160854191</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" id="contact-location">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-label">Location</div>
+                            <span class="contact-val">Ahmedabad, Gujarat, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ✉️ REAL FORM — powered by Formspree
+             Steps to activate:
+             1. Go to https://formspree.io and create a free account
+             2. Create a new form → copy your unique endpoint URL
+             3. Replace the action below with your Formspree endpoint
+             e.g. action="https://formspree.io/f/YOUR_ID_HERE"
+        -->
+                <form class="contact-form" id="contact-form" action="https://formspree.io/f/xojnoaqb" method="POST">
+                    <!-- Redirect back to your portfolio after submission -->
+                    <input type="hidden" name="_next" value="https://yourportfolio.com/#contact" />
+                    <input type="hidden" name="_subject" value="New message from portfolio" />
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required
+                            autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Hey Dhairya, let's talk about..." rows="5"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit" id="form-submit-btn">
+                        <span>Send Message</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                    </button>
+                    <div class="form-note">📬 Messages go directly to shahdhairya763@gmail.com</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ░░ FOOTER ░░ -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <span class="logo-bracket">&lt;</span>DS<span class="logo-bracket">/&gt;</span>
+            </div>
+            <p class="footer-copy">Designed & Built by Dhairya Shah — 2025</p>
+            <div class="footer-links">
+                <a href="mailto:shahdhairya763@gmail.com">Email</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
