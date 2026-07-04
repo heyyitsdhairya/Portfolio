@@ -106,7 +106,7 @@ function initTyping() {
 
     const phrases = [
         'ICT Student @ PDEU',
-        'Security Enthusiast',
+        'Software Engineer',
         'Competitive Programmer',
         'Python & Java Developer',
         'Systems Builder',
