@@ -107,9 +107,9 @@ function initTyping() {
     const phrases = [
         'B.Tech ICT @ PDEU',
         'Full Stack Developer',
-        'DSA Practitioner',
-        'Next.js & Node.js Engineer',
-        'AI & Genetic Algorithm Developer',
+        'Software Engineer',
+        'REST APIs & Backend Services',
+        'SQL & NoSQL Databases',
         'Open to Opportunities',
     ];
 
