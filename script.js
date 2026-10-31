@@ -154,6 +154,7 @@ function initRevealObserver() {
         '.exp-card',
         '.skill-category', '.proficiency-section',
         '.project-card',
+        '.assessment-card',
         '.ach-card', '.cp-card',
         '.contact-item', '.contact-form',
         '.edu-item', '.stat-card',
